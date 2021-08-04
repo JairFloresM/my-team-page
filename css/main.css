@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;  
+}
+
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem 0.5rem;
+    font-size: 12px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'P-serif' sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    margin: 2rem 0;
+    line-height: 1.2rem;
+}
+
+.main-team {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-rows: repeat(3, 270px);
+    justify-content: center;
+    justify-items: center;
+    grid-column-gap: .5rem;
+}
+
+.team-item {
+    width: 100%;
+    height: 100%;
+}
+
+.team-item:nth-child(2n) {
+    display: flex;
+    align-items: flex-end;
+}
+
+.item-container {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+}
+
+.item-body {
+    font-weight: 700;
+}
+
+.item-body img {
+    width: 130px;
+    height: 180px;
+    margin-bottom: .5rem;
+}
+
+.team-item .title {
+    writing-mode: vertical-lr;
+    padding-left: 0.5rem;
+    text-transform: uppercase;
+}
+
+footer {
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    color: #888888
+}
+
+footer span {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+@media screen AND (min-width: 500px) {
+
+    header div {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header div > *{
+        width: 50%;
+    }
+
+    .main-title {
+        margin: initial;
+        text-align: left;
+    }
+
+    .main-title p {
+        width: 65%;
+    }
+    
+    .main-team {
+        grid-template-columns: repeat(3, minmax(200px, 300px));
+        grid-template-rows: repeat(2, 400px);
+        grid-row-gap: 0;
+    } 
+
+    .team-item:nth-child(n) {
+        align-items: stretch;
+    }
+
+    .team-item:nth-child(2), .team-item:nth-child(5) {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .item-body img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin-bottom: .5rem;
+    }
+
+}
